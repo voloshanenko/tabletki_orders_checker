@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+
+  web:
+    build: .
+    ports:
+    - "5000:5000"
+    environment:
+    - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+    - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+    - TABLETKIUA_SN=${TABLETKIUA_HOST}
+    - TABLETKIUA_API_USERNAME=${TABLETKIUA_API_USERNAME}
+    - TABLETKIUA_API_PASSWORD=${TABLETKIUA_API_PASSWORD}  
+    volumes:
+      - .:/app
