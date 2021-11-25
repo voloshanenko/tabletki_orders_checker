@@ -19,7 +19,7 @@ for env_variable in portainer_env_variables:
 portainer_host = os.environ.get('PORTAINER_HOST') or 'http://10.100.101.201:9000/api'
 portainer_username = os.environ.get('PORTAINER_USERNAME') or 'admin'
 portainer_password = os.environ.get('PORTAINER_PASSWORD') or 'Qazwsx!@#123'
-portainer_stack_name = os.environ.get('PORTAINER_STACK_NAME') or 'tabletki_orders_checker'
+portainer_stack_name = os.environ.get('PORTAINER_STACK_NAME') or 'tabletkiorderschecker'
 
 def main():
     portainer_config = portainer_api.Configuration()
@@ -72,9 +72,9 @@ def main():
         print("......Repo URL: '" + git_url + "'")
 
 
-        stack_env_variables = ["DB_HOST", "DB_NAME_CDR", "DB_NAME_USERS", "DB_USERNAME", "DB_PASSWORD",
+        stack_env_variables = ["TELEGRAM_CHAT_ID", "TELEGRAM_BOT_TOKEN",
                                "VIRTUAL_HOST", "VIRTUAL_PORT", "LETSENCRYPT_HOST", "LETSENCRYPT_EMAIL",
-                               "ASTERISK_HOST", "ASTERISK_AMI_USERNAME", "ASTERISK_AMI_PASSWORD"]
+                               "TABLETKIUA_SN", "TABLETKIUA_API_USERNAME", "TABLETKIUA_API_PASSWORD"]
         stack_env_dict = []
 
         for env_variable in stack_env_variables:
