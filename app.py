@@ -27,6 +27,7 @@ def escapeSymbolsForTelegram(raw_message):
     escaped_message = escaped_message.replace("-", "\-")
     escaped_message = escaped_message.replace("(", "\(")
     escaped_message = escaped_message.replace(")", "\)")
+    escaped_message = escaped_message.replace("=", "\=")
     return escaped_message
 
 

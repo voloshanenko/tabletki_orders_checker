@@ -13,6 +13,7 @@ services:
     - VIRTUAL_PORT=${VIRTUAL_PORT}
     - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
     - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+    - PYTHONUNBUFFERED=1
     networks:
       - webproxy
 
